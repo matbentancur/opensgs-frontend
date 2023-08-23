@@ -1,0 +1,8 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:url var="inicio" action="IndexAction" namespace="/"/>
+
+<li class="breadcrumb-item">
+    <a class="link-dark" href="${inicio}"><s:text name="OpenSGSBean.text.index"/></a>
+</li>

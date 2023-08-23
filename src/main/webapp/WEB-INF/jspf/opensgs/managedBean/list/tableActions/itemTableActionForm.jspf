@@ -1,0 +1,33 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:if test="parentId != null && aplicacionId != null" >
+    <s:url var="form" action="%{actionName}" method="form" namespace="%{nameSpace}">
+        <s:param name="id" value="id" />
+        <s:param name="parentId" value="parentId"/>
+        <s:param name="aplicacionId" value="aplicacionId"/>
+    </s:url>
+<s:elseif test="parentId == null && aplicacionId != null" >
+    <s:url var="form" action="%{actionName}" method="form" namespace="%{nameSpace}">
+        <s:param name="id" value="id"/>
+        <s:param name="aplicacionId" value="aplicacionId"/>
+    </s:url>
+</s:elseif>
+<s:elseif test="parentId != null && aplicacionId == null" >
+    <s:url var="form" action="%{actionName}" method="form" namespace="%{nameSpace}">
+        <s:param name="id" value="id"/>
+        <s:param name="parentId" value="parentId"/>
+    </s:url>
+</s:elseif>
+<s:else>
+    <s:url var="form" action="%{actionName}" method="form" namespace="%{nameSpace}">
+        <s:param name="id" value="id"/>
+    </s:url>
+</s:else>
+
+<li>
+    <a class="btn btn-white" href="${form}">
+        <i class="bi bi-pencil-square"></i>
+        <s:text name="OpenSGSBean.text.modify"/>
+    </a>
+</li>

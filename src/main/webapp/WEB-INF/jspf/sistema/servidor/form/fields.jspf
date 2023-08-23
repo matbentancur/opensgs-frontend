@@ -1,0 +1,14 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<%@ include file="/WEB-INF/jspf/field/name.jspf" %>
+
+<%@ include file="/WEB-INF/jspf/field/server.jspf" %>
+
+<%@ include file="/WEB-INF/jspf/field/port.jspf" %>
+
+<%@ include file="/WEB-INF/jspf/field/username.jspf" %>
+
+<%@ include file="/WEB-INF/jspf/field/password.jspf" %>
+
+

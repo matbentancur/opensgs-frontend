@@ -1,0 +1,16 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:url var="actividad" action="ActividadAction" method="listar" namespace="/sistema" />
+
+<div class="col">
+    <a class="link-dark" href="${actividad}">
+        <div class="card text-center">
+            <i class="bi bi-eye"></i>
+            <div class="card-body">
+                <h5 class="card-title"><s:text name="Menu.card.title.activity"/></h5>
+                <p class="card-text"><s:text name="Menu.card.text.activity"/></p>
+            </div>
+        </div>
+    </a>
+</div>

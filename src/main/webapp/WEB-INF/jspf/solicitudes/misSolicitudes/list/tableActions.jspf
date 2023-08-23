@@ -1,0 +1,38 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:url var="form" action="%{actionName}" method="form" namespace="%{nameSpace}">
+    <s:param name="id" value="id" suppressEmptyParameters="true"/>
+</s:url>
+
+<s:url var="ver" action="%{actionName}" method="ver" namespace="%{nameSpace}">
+    <s:param name="id" value="id" suppressEmptyParameters="true"/>
+</s:url>
+
+<s:url var="constancias" action="%{actionName}" method="constancias" namespace="%{nameSpace}">
+    <s:param name="id" value="id" suppressEmptyParameters="true"/>
+    <s:param name="solicitudId" value="id" suppressEmptyParameters="true"/>
+</s:url>
+
+<li>
+    <a class="btn btn-white" href="${form}">
+        <i class="bi bi-pencil-square"></i>
+        <s:text name="OpenSGSBean.text.modify"/>
+    </a>
+</li>
+
+<li>
+    <a class="btn btn-white" href="${ver}">
+        <i class="bi bi-search"></i>
+        <s:text name="OpenSGSBean.text.view"/>
+    </a>
+</li>
+
+<li>
+    <a class="btn btn-white" href="${constancias}">
+        <i class="bi bi-award"></i>
+        <s:text name="OpenSGSBean.list.certificates"/>
+    </a>
+</li>
+
+

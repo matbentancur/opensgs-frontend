@@ -1,0 +1,16 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:url var="miClave" action="MiClaveAction" method="input" namespace="/usuarios"/>
+
+<div class="col">
+    <a class="link-dark" href="${miClave}">
+        <div class="card text-center">
+            <i class="bi bi-key"></i>
+            <div class="card-body">
+                <h5 class="card-title"><s:text name="Menu.card.title.changeMyPassword"/></h5>
+                <p class="card-text"><s:text name="Menu.card.text.changeMyPassword"/></p>
+            </div>
+        </div>
+    </a>
+</div>

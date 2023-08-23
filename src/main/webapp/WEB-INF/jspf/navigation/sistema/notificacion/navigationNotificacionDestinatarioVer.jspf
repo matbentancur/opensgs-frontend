@@ -1,0 +1,29 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<%@ include file="/WEB-INF/jspf/navigation/navigationHeader.jspf" %>
+
+<%@ include file="/WEB-INF/jspf/navigation/item/breadcrumbItemMenu.jspf" %>
+
+<s:url var="notificaciones" action="NotificacionAction" method="listar" namespace="%{nameSpace}">
+    <s:param name="borrado" value="borrado" suppressEmptyParameters="true"/>
+</s:url>
+
+<s:url var="destinatarios" action="NotificacionAction" method="destinatarios" namespace="%{nameSpace}">
+    <s:param name="id" value="parentId" suppressEmptyParameters="true"/>
+    <s:param name="borrado" value="borrado" suppressEmptyParameters="true"/>
+</s:url>
+
+<li class="breadcrumb-item" aria-current="page">
+    <a class="link-dark" href="${notificaciones}"><s:text name="OpenSGSBean.list.notifications"/></a>
+</li>
+
+<li class="breadcrumb-item" aria-current="page">
+    <a class="link-dark" href="${destinatarios}"><s:text name="OpenSGSBean.list.recipients"/></a>
+</li>
+
+<li class="breadcrumb-item active" aria-current="page">
+    <s:text name="OpenSGSBean.text.view"/>
+</li>
+
+<%@ include file="/WEB-INF/jspf/navigation/navigationFooter.jspf" %>

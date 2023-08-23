@@ -1,0 +1,14 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<%@ include file="/WEB-INF/jspf/navigation/navigationHeader.jspf" %>
+
+<%@ include file="/WEB-INF/jspf/navigation/item/breadcrumbItemMenu.jspf" %>
+
+<%@ include file="/WEB-INF/jspf/navigation/item/breadcrumbItemMisSolicitudes.jspf" %>
+
+<li class="breadcrumb-item active" aria-current="page">
+    <s:property value="textSolicitudNavigation"/>
+</li>
+
+<%@ include file="/WEB-INF/jspf/navigation/navigationFooter.jspf" %>

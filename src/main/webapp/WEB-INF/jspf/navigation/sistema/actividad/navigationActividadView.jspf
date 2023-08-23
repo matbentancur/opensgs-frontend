@@ -1,0 +1,21 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:url var="list" action="%{className}Action" method="listar" namespace="%{nameSpace}">
+    <s:param name="inicioString" value="inicioString"/>
+    <s:param name="finString" value="finString"/>
+</s:url>
+
+<%@ include file="/WEB-INF/jspf/navigation/navigationHeader.jspf" %>
+
+<%@ include file="/WEB-INF/jspf/navigation/item/breadcrumbItemMenu.jspf" %>
+
+<li class="breadcrumb-item" aria-current="page">
+    <a class="link-dark" href="${list}"><s:property value="textListName"/></a>
+</li>
+
+<li class="breadcrumb-item active" aria-current="page">
+    <s:text name="OpenSGSBean.text.view"/>
+</li>
+
+<%@ include file="/WEB-INF/jspf/navigation/navigationFooter.jspf" %>

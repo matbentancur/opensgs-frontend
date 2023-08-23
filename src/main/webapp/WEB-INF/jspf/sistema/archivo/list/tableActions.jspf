@@ -1,0 +1,19 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:url var="descargar" action="%{actionName}" method="descargar" namespace="%{nameSpace}">
+    <s:param name="id" value="id" suppressEmptyParameters="true"/>
+</s:url>
+
+<li>
+    <a class="btn btn-white" href="${descargar}">
+        <i class="bi bi-download"></i>
+        <s:text name="OpenSGSBean.text.download"/>
+    </a>
+</li>
+
+
+
+
+
+

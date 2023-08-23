@@ -1,0 +1,37 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:set var="fieldNameValue" value="%{getFieldNameValue('start')}"/>
+
+<div class="row mb-3">
+    <label for="${fieldNameValue}" class="col-sm-2 col-form-label"><s:text name="OpenSGSBean.attribute.start"/></label>
+    <div class="col-sm-10">
+
+        <%@ include file="/WEB-INF/jspf/field/textFieldInvalid.jspf" %>
+
+        <s:textfield 
+            id="%{fieldNameValue}" 
+            name="%{fieldNameValue}"
+            class="%{valueClass} flatpickrDateTimeStartActivity"
+            type="text"
+            required="true" 
+            maxlength="20" 
+            minlength="1" 
+            />
+
+        <%@ include file="/WEB-INF/jspf/field/textFieldInvalidFeedback.jspf" %>
+
+    </div>
+</div>
+
+<script>
+    flatpickr(
+            ".flatpickrDateTimeStartActivity",
+            {
+                enableTime: true,
+                dateFormat: "d/m/Y H:i",
+                time_24hr: true,
+                "locale": "es"
+            }
+    );
+</script>

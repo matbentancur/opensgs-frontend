@@ -1,0 +1,15 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:if test="%{listaDtAnuncios.size() > 0}">
+    <div class="alert alert-warning d-flex align-items-center" role="alert">
+        <i class="bi bi-megaphone"></i>
+        <div class="container">
+            <ul>
+                <s:iterator value="listaDtAnuncios" status="status">
+                    <li><s:property value="texto"/></li>
+                </s:iterator>
+            </ul>
+        </div>
+    </div>
+</s:if>

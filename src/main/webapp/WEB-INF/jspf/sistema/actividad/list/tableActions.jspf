@@ -1,0 +1,16 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:url var="ver" action="%{actionName}" method="ver" namespace="%{nameSpace}">
+    <s:param name="id" value="id" suppressEmptyParameters="true"/>
+    <s:param name="inicioString" value="inicioString" suppressEmptyParameters="true"/>
+    <s:param name="finString" value="finString" suppressEmptyParameters="true"/>
+</s:url>
+
+<li>
+    <a class="btn btn-white" href="${ver}">
+        <i class="bi bi-search"></i>
+        <s:text name="OpenSGSBean.text.view"/>
+    </a>
+</li>
+

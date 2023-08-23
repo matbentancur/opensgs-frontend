@@ -1,0 +1,12 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:if test="fieldErrors.containsKey(#fieldNameValue)">
+    <div class="invalid-feedback">
+        <s:fielderror>
+            <s:param>${fieldNameValue}</s:param>
+        </s:fielderror>
+    </div>
+</s:if>
+
+

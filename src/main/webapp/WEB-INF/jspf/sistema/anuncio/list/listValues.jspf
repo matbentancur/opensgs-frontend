@@ -1,0 +1,31 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<%@ include file="/WEB-INF/jspf/layout/table/tableValuesStart.jspf" %>
+
+<td>
+    <%@ include file="/WEB-INF/jspf/opensgs/bean/list/tableActionsHeader.jspf" %>
+    <%@ include file="/WEB-INF/jspf/opensgs/managedBean/list/tableActions.jspf" %>
+    <%@ include file="/WEB-INF/jspf/opensgs/bean/list/tableActionsFooter.jspf" %>
+</td>
+
+<%@ include file="/WEB-INF/jspf/opensgs/bean/list/tableValuesStart.jspf" %>
+
+<%@ include file="/WEB-INF/jspf/opensgs/managedBean/list/tableValuesStart.jspf" %>
+
+<td><s:property value="nombre"/></td>
+<td><s:property value="texto"/></td>
+<td><s:property value="inicio"/></td>
+<td><s:property value="fin"/></td>
+<td><s:property value="alcance"/></td>
+
+<%@ include file="/WEB-INF/jspf/opensgs/bean/list/tableValuesEnd.jspf" %>
+
+<%@ include file="/WEB-INF/jspf/opensgs/managedBean/list/tableValuesEnd.jspf" %>
+
+<%@ include file="/WEB-INF/jspf/layout/table/tableValuesEnd.jspf" %>
+
+
+
+
+

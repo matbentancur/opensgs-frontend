@@ -1,0 +1,28 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<div class="py-4">
+    <h3><s:property value="%{tableTitle}"/>:</h3>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Curso</th>
+                    <th>Fecha de Apertura</th>
+                    <th>Fecha de Cierre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <s:iterator value="listaDtAplicaciones" status="status">
+
+                    <tr>
+                        <th><s:property value="titulo"/></th>
+                        <th><s:property value="apertura"/></th>
+                        <th><s:property value="cierre"/></th>
+                    </tr>
+
+                </s:iterator>
+            </tbody>
+        </table>
+    </div>
+</div>

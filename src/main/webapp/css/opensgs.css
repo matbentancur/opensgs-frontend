@@ -1,0 +1,88 @@
+html,
+body {
+    height: 100%;
+}
+
+main > .container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    margin: auto;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-signin  img {
+    height: unset;
+}
+
+.form-signin  i{
+    color: black;
+}
+
+.card-img, .card-img-top {
+    height: 100px;
+}
+
+.card > i {
+    font-size: 100px;
+    color: black;
+}
+
+.alert i {
+    font-size: 50px;
+    color: currentColor;
+}
+
+.btn-dark i {
+    color: white;
+}
+
+.btn-group > .btn > i {
+    font-size: 20px;
+}
+
+a.link-dark > i{
+    font-size: 20px;
+    color: black;
+}
+
+.input-group-text i{
+    font-size: unset;
+}
+
+.navbar i{
+    color: white;
+}
+
+.navbar-brand img{
+    height: 48px;
+}
+
+.captcha > i{
+    color: black;
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+.form-select option:first-child {
+    color: #ced4da;
+}

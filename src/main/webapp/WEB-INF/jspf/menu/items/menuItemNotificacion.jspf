@@ -1,0 +1,18 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:url var="notificacion" action="NotificacionAction" method="listar" namespace="/sistema">
+    <s:param name="borrado" value="false"/>
+</s:url>
+
+<div class="col">
+    <a class="link-dark" href="${notificacion}">
+        <div class="card text-center">
+            <i class="bi bi-bell"></i>
+            <div class="card-body">
+                <h5 class="card-title"><s:text name="Menu.card.title.notifications"/></h5>
+                <p class="card-text"><s:text name="Menu.card.text.notifications"/></p>
+            </div>
+        </div>
+    </a>
+</div>

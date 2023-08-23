@@ -1,0 +1,9 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<div class="fs-5 pt-5 pb-5">
+    <a class="btn btn-dark" href="javascript:history.back()">
+        <i class="bi bi-arrow-left"></i>
+        <s:text name="OpenSGSBean.text.back"/>
+    </a>
+</div>

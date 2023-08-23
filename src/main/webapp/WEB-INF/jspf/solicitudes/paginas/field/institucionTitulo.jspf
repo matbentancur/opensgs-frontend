@@ -1,0 +1,27 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:set var="fieldNameValue" value="%{getFieldNameValue('institucionTitulo')}"/>
+
+<div class="row mb-3">
+    <label for="${fieldNameValue}" class="col-sm-2 col-form-label"><s:text name="Pagina.attribute.institucionTitulo"/></label>
+    <div class="col-sm-10">
+
+        <%@ include file="/WEB-INF/jspf/field/textFieldInvalid.jspf" %>
+
+        <s:textfield 
+            id="%{fieldNameValue}" 
+            name="%{fieldNameValue}"
+            class="%{valueClass}"
+            type="text"
+            required="true" 
+            maxlength="128" 
+            minlength="2" 
+            />
+
+        <%@ include file="/WEB-INF/jspf/field/textFieldInvalidFeedback.jspf" %>
+
+    </div>
+</div>
+
+

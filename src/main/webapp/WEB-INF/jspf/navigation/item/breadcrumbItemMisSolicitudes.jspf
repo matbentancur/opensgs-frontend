@@ -1,0 +1,8 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:url var="misSolicitudes" action="MisSolicitudesAction" method="listar" namespace="/solicitudes"/>
+
+<li class="breadcrumb-item" aria-current="page">
+    <a class="link-dark" href="${misSolicitudes}"><s:text name="OpenSGSBean.title.myRequests"/></a>
+</li>

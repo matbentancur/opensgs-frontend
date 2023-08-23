@@ -1,0 +1,28 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<div class="accordion" id="accordionPreguntas">
+
+    <s:iterator value="listaDtPreguntaFrecuentes" status="status">
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="pregunta${id}">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#respuesta${id}" aria-expanded="true" aria-controls="respuesta${id}">
+                    <s:property value="pregunta"/>
+                </button>
+            </h2>
+            <div id="respuesta${id}" class="accordion-collapse collapse" aria-labelledby="pregunta${id}" data-bs-parent="#accordionPreguntas">
+                <div class="accordion-body">
+                    <s:property value="respuesta"/>
+                </div>
+            </div>
+        </div>
+
+    </s:iterator>
+
+</div>
+
+
+
+
+

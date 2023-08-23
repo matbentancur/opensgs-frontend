@@ -1,0 +1,19 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:url var="actividadVer" action="%{actionName}" method="actividadVer" namespace="%{nameSpace}">
+    <s:param name="parentId" value="parentId" suppressEmptyParameters="true"/>
+    <s:param name="childId" value="childId" suppressEmptyParameters="true"/>
+    <s:param name="aplicacionId" value="aplicacionId" suppressEmptyParameters="true"/>
+    <s:param name="constanciaId" value="constanciaId" suppressEmptyParameters="true"/>
+    <s:param name="plantillaAplicacionId" value="plantillaAplicacionId" suppressEmptyParameters="true"/>
+    <s:param name="actividadId" value="id" suppressEmptyParameters="true"/>
+    <s:param name="borrado" value="borrado" suppressEmptyParameters="true"/>
+</s:url>
+
+<li>
+    <a class="btn btn-white" href="${actividadVer}">
+        <i class="bi bi-search"></i>
+        <s:text name="OpenSGSBean.text.view"/>
+    </a>
+</li>

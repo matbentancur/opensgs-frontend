@@ -1,0 +1,15 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+                </div>
+            </main>
+            
+            <footer class="footer mt-auto py-3 bg-light">
+                <div class="container text-center">
+                    <span class="text-muted"><s:text name="Sistema.pie"/></span>
+                </div>
+            </footer>
+
+    </body>
+</html>
+

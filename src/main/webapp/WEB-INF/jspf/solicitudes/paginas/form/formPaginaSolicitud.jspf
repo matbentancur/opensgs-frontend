@@ -1,0 +1,8 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:hidden name="solicitudId" value="%{solicitudId}"/>
+
+<s:hidden name="paginaAplicacionId" value="%{paginaAplicacionId}"/>
+
+<s:hidden name="pagina" value="%{pagina}"/>

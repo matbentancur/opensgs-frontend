@@ -1,0 +1,8 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<td><s:property value="nombre"/></td>
+<td><s:property value="servidor"/></td>
+<td><s:property value="puerto"/></td>
+<td><s:property value="usuario"/></td>
+

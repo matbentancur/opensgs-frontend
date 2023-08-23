@@ -1,0 +1,10 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<%@ include file="/WEB-INF/jspf/field/name.jspf" %>
+
+<%@ include file="/WEB-INF/jspf/field/positionX.jspf" %>
+
+<%@ include file="/WEB-INF/jspf/field/positionY.jspf" %>
+
+

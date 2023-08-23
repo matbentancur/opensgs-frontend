@@ -1,0 +1,18 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:url var="paginaAplicacion" action="PaginaAplicacionAction" method="listar" namespace="/sistema">
+    <s:param name="borrado" value="false"/>
+</s:url>
+
+<div class="col">
+    <a class="link-dark" href="${paginaAplicacion}">
+        <div class="card text-center">
+            <i class="bi bi-journals"></i>
+            <div class="card-body">
+                <h5 class="card-title">Páginas de Aplicación</h5>
+                <p class="card-text">Gestión de las Páginas de Aplicación.</p>
+            </div>
+        </div>
+    </a>
+</div>

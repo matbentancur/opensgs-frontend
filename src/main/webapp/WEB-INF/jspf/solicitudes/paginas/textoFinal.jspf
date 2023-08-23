@@ -1,0 +1,12 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:if test="dtPaginaAplicacion.textoFinal != null" >
+    <div class="alert alert-info d-flex align-items-center" role="alert">
+        <i class="bi bi-info-circle"></i>
+        <div class="container">
+            <s:property value="dtPaginaAplicacion.textoFinal"/>
+        </div>
+    </div>
+</s:if>
+

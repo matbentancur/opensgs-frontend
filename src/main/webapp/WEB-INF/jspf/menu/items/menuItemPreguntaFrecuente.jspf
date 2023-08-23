@@ -1,0 +1,18 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:url var="preguntaFrecuente" action="PreguntaFrecuenteAction" method="listar" namespace="/sistema">
+    <s:param name="borrado" value="false"/>
+</s:url>
+
+<div class="col">
+    <a class="link-dark" href="${preguntaFrecuente}">
+        <div class="card text-center">
+            <i class="bi bi-question-circle"></i>
+            <div class="card-body">
+                <h5 class="card-title"><s:text name="Menu.card.title.faqs"/></h5>
+                <p class="card-text"><s:text name="Menu.card.text.faqs"/></p>
+            </div>
+        </div>
+    </a>
+</div>

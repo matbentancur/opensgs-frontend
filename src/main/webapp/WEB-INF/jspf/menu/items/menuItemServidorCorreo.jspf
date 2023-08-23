@@ -1,0 +1,20 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:url var="servidorCorreo" action="ServidorCorreoAction" method="listar" namespace="/sistema">
+    <s:param name="borrado" value="false"/>
+</s:url>
+
+<s:url var="servidorCorreoIcon" value="/images/default/server-mail.svg"/>
+
+<div class="col">
+    <a class="link-dark" href="${servidorCorreo}">
+        <div class="card text-center">
+            <img class="card-img-top" src="${servidorCorreoIcon}"/>
+            <div class="card-body">
+                <h5 class="card-title"><s:text name="Menu.card.title.mailServer"/></h5>
+                <p class="card-text"><s:text name="Menu.card.text.mailServer"/></p>
+            </div>
+        </div>
+    </a>
+</div>

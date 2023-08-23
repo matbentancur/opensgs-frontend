@@ -1,0 +1,28 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<%@ include file="/WEB-INF/jspf/navigation/navigationHeader.jspf" %>
+
+<%@ include file="/WEB-INF/jspf/navigation/item/breadcrumbItemMenu.jspf" %>
+
+<s:if test="aplicacionId != null" >
+    <%@ include file="/WEB-INF/jspf/navigation/item/breadcrumbItemAplicacionHijo.jspf" %>
+</s:if>
+
+<s:if test="constanciaId != null" >
+    <%@ include file="/WEB-INF/jspf/navigation/item/breadcrumbItemConstanciaHijo.jspf" %>
+</s:if>
+
+<s:if test="plantillaAplicacionId != null" >
+    <%@ include file="/WEB-INF/jspf/navigation/item/breadcrumbItemPlantillaAplicacion.jspf" %>
+</s:if>
+
+<%@ include file="/WEB-INF/jspf/navigation/item/breadcrumbItemOpenSGSBeanList.jspf" %>
+
+<%@ include file="/WEB-INF/jspf/navigation/item/breadcrumbItemOpenSGSBeanActividad.jspf" %>
+
+<li class="breadcrumb-item active" aria-current="page">
+    <s:text name="OpenSGSBean.text.view"/>
+</li>
+
+<%@ include file="/WEB-INF/jspf/navigation/navigationFooter.jspf" %>

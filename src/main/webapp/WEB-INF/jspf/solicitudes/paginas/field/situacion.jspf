@@ -1,0 +1,29 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:set var="fieldNameValue" value="%{getFieldNameValue('situacion')}"/>
+
+<fieldset class="row mb-3">
+    <legend class="col-form-label col-sm-2 pt-0"><s:text name="Pagina.attribute.situacion"/></legend>
+    <div class="col-sm-10">
+
+        <%@ include file="/WEB-INF/jspf/field/selectInvalid.jspf" %>
+
+        <s:select 
+            id="%{fieldNameValue}" 
+            name="%{fieldNameValue}" 
+            class="%{valueClass}"
+            multiple="false" 
+            listKey="key" 
+            listValue="value" 
+            list="leerElementosProperties('Pagina.situacion')" 
+            headerValue="%{getText('OpenSGSBean.text.select.novalue')}"
+            headerKey=""
+            required="true" 
+            />    
+
+        <%@ include file="/WEB-INF/jspf/field/textFieldInvalidFeedback.jspf" %>
+
+</fieldset>
+
+

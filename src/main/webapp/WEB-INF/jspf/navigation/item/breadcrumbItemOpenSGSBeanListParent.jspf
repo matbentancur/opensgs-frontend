@@ -1,0 +1,10 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:url var="listParent" action="%{parentClassName}Action" method="listar" namespace="%{nameSpace}">
+    <s:param name="borrado" value="borrado" suppressEmptyParameters="true"/>
+</s:url>
+
+<li class="breadcrumb-item" aria-current="page">
+    <a class="link-dark" href="${listParent}"><s:property value="textParentListName"/></a>
+</li>

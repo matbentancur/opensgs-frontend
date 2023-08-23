@@ -1,0 +1,18 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:url var="archivo" action="ArchivoAction" method="listar" namespace="/sistema">
+    <s:param name="borrado" value="false"/>
+</s:url>
+
+<div class="col">
+    <a class="link-dark" href="${archivo}">
+        <div class="card text-center">
+            <i class="bi bi-upload"></i>
+            <div class="card-body">
+                <h5 class="card-title"><s:text name="Menu.card.title.files"/></h5>
+                <p class="card-text"><s:text name="Menu.card.text.files"/></p>
+            </div>
+        </div>
+    </a>
+</div>

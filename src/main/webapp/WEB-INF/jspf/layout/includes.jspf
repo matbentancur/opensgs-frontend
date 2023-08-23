@@ -1,0 +1,59 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="sj" uri="/struts-jquery-tags"%>
+<%@ taglib prefix="sb" uri="/struts-bootstrap-tags" %>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<sj:head jqueryui="true" loadAtOnce="true"/>
+<%--<sb:head/>--%>
+
+<!--FAVICON-->
+<s:url var="favicon" value="/images/favicon.png" includeParams="none"/>
+<link rel="shortcut icon" href="${favicon}" type="image/png">
+
+<!--BOOTSTRAP-->
+<s:url var="boostrapCSS" value="/webjars/bootstrap/5.2.3/dist/css/bootstrap.min.css" includeParams="none"/>
+<link href="${boostrapCSS}" rel="stylesheet" type="text/css">
+
+<s:url var="boostrapJS" value="/webjars/bootstrap/5.2.3/dist/js/bootstrap.bundle.min.js" includeParams="none"/>
+<script type="text/javascript" src="${boostrapJS}"></script>
+
+<!--BOOTSTRAP ICONS-->
+<s:url var="boostrapIcons" value="/webjars/bootstrap-icons/1.10.3/font/bootstrap-icons.css" includeParams="none"/>
+<link href="${boostrapIcons}" rel="stylesheet" type="text/css">
+
+<!--FLATPICKR-->
+<s:url var="flatpickrCSS" value="/webjars/flatpickr/4.6.13/dist/flatpickr.min.css" includeParams="none"/>
+<link rel="stylesheet" href="${flatpickrCSS}">
+
+<s:url var="flatpickrJS" value="/webjars/flatpickr/4.6.13/dist/flatpickr.min.js" includeParams="none"/>
+<script type="text/javascript" src="${flatpickrJS}"></script>
+
+<s:url var="flatpickrLocaleES" value="/webjars/flatpickr/4.6.13/dist/l10n/es.js" includeParams="none"/>
+<script type="text/javascript" src="${flatpickrLocaleES}"></script>
+
+<!--OPEN SGS-->
+<s:url var="openSGSCSS" value="/css/opensgs.css" includeParams="none"/>
+<link href="${openSGSCSS}" rel="stylesheet" type="text/css">
+
+<s:url var="openSGSJS" value="/js/opensgs.js" includeParams="none"/>
+<script type="text/javascript" src="${openSGSJS}"></script>
+
+<s:url var="tooltip" value="/js/tooltip.js" includeParams="none"/>
+<script type="text/javascript" src="${tooltip}"></script>
+
+<s:url var="captcha" value="/js/captcha.js" includeParams="none"/>
+<script type="text/javascript" src="${captcha}"></script>
+
+
+<s:url var="dataTablesCSS" value="/js/DataTables/datatables.min.css" includeParams="none"/>
+<link href="${dataTablesCSS}" rel="stylesheet" type="text/css">
+
+<s:url var="dataTablesJS" value="/js/DataTables/datatables.min.js" includeParams="none"/>
+<script type="text/javascript" src="${dataTablesJS}"></script>
+
+<s:url var="tinymce" value="/js/tinymce/tinymce.min.js" includeParams="none"/>
+<script type="text/javascript" src="${tinymce}"></script>
+

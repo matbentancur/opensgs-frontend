@@ -1,0 +1,20 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:url var="servidorAutenticacion" action="ServidorAutenticacionAction" method="listar" namespace="/sistema">
+    <s:param name="borrado" value="false"/>
+</s:url>
+
+<s:url var="servidorAutenticacionIcon" value="/images/default/server-auth.svg"/>
+
+<div class="col">
+    <a class="link-dark" href="${servidorAutenticacion}">
+        <div class="card text-center">
+            <img class="card-img-top" src="${servidorAutenticacionIcon}"/>
+            <div class="card-body">
+                <h5 class="card-title"><s:text name="Menu.card.title.authenticationServer"/></h5>
+                <p class="card-text"><s:text name="Menu.card.text.authenticationServer"/></p>
+            </div>
+        </div>
+    </a>
+</div>

@@ -1,0 +1,29 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<%@ include file="/WEB-INF/jspf/navigation/navigationHeader.jspf" %>
+
+<%@ include file="/WEB-INF/jspf/navigation/item/breadcrumbItemMenu.jspf" %>
+
+<s:url var="perfiles" action="PerfilAction" method="listar" namespace="%{nameSpace}">
+    <s:param name="borrado" value="borrado" suppressEmptyParameters="true"/>
+</s:url>
+
+<s:url var="permisos" action="PerfilAction" method="permisos" namespace="%{nameSpace}">
+    <s:param name="id" value="parentId" suppressEmptyParameters="true"/>
+    <s:param name="borrado" value="borrado" suppressEmptyParameters="true"/>
+</s:url>
+
+<li class="breadcrumb-item" aria-current="page">
+    <a class="link-dark" href="${perfiles}"><s:text name="OpenSGSBean.list.profiles"/></a>
+</li>
+
+<li class="breadcrumb-item" aria-current="page">
+    <a class="link-dark" href="${permisos}"><s:text name="OpenSGSBean.list.permissions"/></a>
+</li>
+
+<li class="breadcrumb-item active" aria-current="page">
+    <s:text name="OpenSGSBean.text.view"/>
+</li>
+
+<%@ include file="/WEB-INF/jspf/navigation/navigationFooter.jspf" %>

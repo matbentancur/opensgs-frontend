@@ -1,0 +1,18 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:url var="estado" action="%{actionName}" method="estadoForm" namespace="%{nameSpace}">
+    <s:param name="id" value="id" suppressEmptyParameters="true"/>
+    <s:param name="aplicacionId" value="aplicacionId" suppressEmptyParameters="true"/>
+    <s:param name="borrado" value="borrado" suppressEmptyParameters="true"/>
+</s:url>
+
+<li>
+    <a class="btn btn-white" href="${estado}">
+        <i class="bi bi-clipboard-check"></i>
+        <s:text name="OpenSGSBean.text.status"/>
+    </a>
+</li>
+
+
+

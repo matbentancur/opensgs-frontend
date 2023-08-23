@@ -1,0 +1,37 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:set var="fieldNameValue" value="%{getFieldNameValue('fechaNacimiento')}"/>
+
+<div class="row mb-3">
+    <label for="${fieldNameValue}" class="col-sm-2 col-form-label"><s:text name="Pagina.attribute.fechaNacimiento"/></label>
+    <div class="col-sm-10">
+
+        <%@ include file="/WEB-INF/jspf/field/textFieldInvalid.jspf" %>
+
+        <s:textfield 
+            id="%{fieldNameValue}" 
+            name="%{fieldNameValue}"
+            class="%{valueClass} flatpickrDateTime"
+            type="text"
+            maxlength="20" 
+            minlength="1" 
+            />
+
+        <%@ include file="/WEB-INF/jspf/field/textFieldInvalidFeedback.jspf" %>
+
+    </div>
+</div>
+
+<script>
+    flatpickr(
+            ".flatpickrDateTime",
+            {
+                enableTime: false,
+                dateFormat: "d/m/Y",
+                maxDate: "today",
+                time_24hr: true,
+                "locale": "es"
+            }
+    );
+</script>

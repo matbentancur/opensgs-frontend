@@ -1,0 +1,9 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:set var="valueClass" value="%{'form-check-input'}"/>
+<s:if test="fieldErrors.containsKey(#fieldNameValue)">
+    <s:set var="valueClass" value="%{'form-check-input is-invalid'}" />
+</s:if>
+
+

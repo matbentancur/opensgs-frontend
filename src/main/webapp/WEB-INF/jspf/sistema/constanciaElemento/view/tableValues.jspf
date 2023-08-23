@@ -1,0 +1,17 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<tr>
+    <th><s:text name="OpenSGSBean.attribute.name"/></th>
+    <td><s:property value="dtOpenSGSManagedBean.nombre"/></td>
+</tr>
+
+<tr>
+    <th><s:text name="OpenSGSBean.attribute.positionX"/></th>
+    <td><s:property value="dtOpenSGSManagedBean.posicionX"/></td>
+</tr>
+
+<tr>
+    <th><s:text name="OpenSGSBean.attribute.positionY"/></th>
+    <td><s:property value="dtOpenSGSManagedBean.posicionY"/></td>
+</tr>

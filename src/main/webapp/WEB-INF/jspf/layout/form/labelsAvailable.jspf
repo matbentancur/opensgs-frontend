@@ -1,0 +1,33 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<div class="pe-3 pb-3"">
+    <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#etiquetasDisponibles" aria-expanded="false" aria-controls="collapseExample">
+        <s:text name="OpenSGSBean.text.availableLabels"/>
+    </button>
+    <div class="collapse" id="etiquetasDisponibles">
+        <div class="card card-body">
+            Etiquetas disponibles:<br>
+            %{Sistema.nombre} = Nombre del sistema<br>
+            %{Sistema.url} = URL del sistema<br>
+            %{Sistema.correoSoporte} = Correo electronico del soporte<br>
+            %{Sistema.fecha} = Fecha actual del sistema dd/mm/aaaa<br>
+            %{Sistema.fechaHora} = Fecha y hora actual del sistema dd/mm/aaaa HH:MM<br>
+            %{Aplicacion.nombre} = Nombre de la aplicación<br>
+            %{Aplicacion.titulo} = Título de la aplicación<br>
+            %{Aplicacion.apertura} = Apertura de la aplicación<br>
+            %{Aplicacion.cierre} = Cierre de la aplicación<br>
+            %{Aplicacion.contacto} = Correo electronico de contacto de la aplicación<br>
+            %{Usuario.documentoTipo} = Tipo de documento del usuario<br>
+            %{Usuario.documento} = Documento del usuario<br>
+            %{Usuario.email} = Correo electronico del usuario<br>
+            %{Usuario.nombres} = Nombres del usuario<br>
+            %{Usuario.apellidos} = Apellidos del usuario<br>
+            %{Usuario.telefono} = Teléfono del usuario<br>
+            %{Usuario.perfilGlobal} = Perfil global del usuario<br>    
+        </div>
+    </div>
+</div>
+
+
+

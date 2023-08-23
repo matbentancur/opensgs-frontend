@@ -1,0 +1,121 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:url var="form" action="%{actionName}" method="form" namespace="%{nameSpace}">
+    <s:param name="id" value="id" suppressEmptyParameters="true"/>
+    <s:param name="parentId" value="parentId" suppressEmptyParameters="true"/>
+    <s:param name="aplicacionId" value="aplicacionId" suppressEmptyParameters="true"/>
+    <s:param name="constanciaId" value="constanciaId" suppressEmptyParameters="true"/>
+    <s:param name="plantillaAplicacionId" value="plantillaAplicacionId" suppressEmptyParameters="true"/>
+    <s:param name="borrado" value="borrado" suppressEmptyParameters="true"/>
+</s:url>
+
+<s:url var="ver" action="%{actionName}" method="ver" namespace="%{nameSpace}">
+    <s:param name="id" value="id" suppressEmptyParameters="true"/>
+    <s:param name="parentId" value="parentId" suppressEmptyParameters="true"/>
+    <s:param name="aplicacionId" value="aplicacionId" suppressEmptyParameters="true"/>
+    <s:param name="constanciaId" value="constanciaId" suppressEmptyParameters="true"/>
+    <s:param name="plantillaAplicacionId" value="plantillaAplicacionId" suppressEmptyParameters="true"/>
+    <s:param name="borrado" value="borrado" suppressEmptyParameters="true"/>
+</s:url>
+
+<s:url var="activar" action="%{actionName}" method="activar" namespace="%{nameSpace}">
+    <s:param name="id" value="id" suppressEmptyParameters="true"/>
+    <s:param name="parentId" value="parentId" suppressEmptyParameters="true"/>
+    <s:param name="aplicacionId" value="aplicacionId" suppressEmptyParameters="true"/>
+    <s:param name="constanciaId" value="constanciaId" suppressEmptyParameters="true"/>
+    <s:param name="plantillaAplicacionId" value="plantillaAplicacionId" suppressEmptyParameters="true"/>
+    <s:param name="borrado" value="borrado" suppressEmptyParameters="true"/>
+</s:url>
+
+<s:url var="desactivar" action="%{actionName}" method="desactivar" namespace="%{nameSpace}">
+    <s:param name="id" value="id" suppressEmptyParameters="true"/>
+    <s:param name="parentId" value="parentId" suppressEmptyParameters="true"/>
+    <s:param name="aplicacionId" value="aplicacionId" suppressEmptyParameters="true"/>
+    <s:param name="constanciaId" value="constanciaId" suppressEmptyParameters="true"/>
+    <s:param name="plantillaAplicacionId" value="plantillaAplicacionId" suppressEmptyParameters="true"/>
+    <s:param name="borrado" value="borrado" suppressEmptyParameters="true"/>
+</s:url>
+
+<s:url var="borrar" action="%{actionName}" method="borrar" namespace="%{nameSpace}">
+    <s:param name="id" value="id" suppressEmptyParameters="true"/>
+    <s:param name="parentId" value="parentId" suppressEmptyParameters="true"/>
+    <s:param name="aplicacionId" value="aplicacionId" suppressEmptyParameters="true"/>
+    <s:param name="constanciaId" value="constanciaId" suppressEmptyParameters="true"/>
+    <s:param name="plantillaAplicacionId" value="plantillaAplicacionId" suppressEmptyParameters="true"/>
+    <s:param name="borrado" value="borrado" suppressEmptyParameters="true"/>
+</s:url>
+
+<s:url var="restaurar" action="%{actionName}" method="restaurar" namespace="%{nameSpace}">
+    <s:param name="id" value="id" suppressEmptyParameters="true"/>
+    <s:param name="parentId" value="parentId" suppressEmptyParameters="true"/>
+    <s:param name="aplicacionId" value="aplicacionId" suppressEmptyParameters="true"/>
+    <s:param name="constanciaId" value="constanciaId" suppressEmptyParameters="true"/>
+    <s:param name="plantillaAplicacionId" value="plantillaAplicacionId" suppressEmptyParameters="true"/>
+    <s:param name="borrado" value="borrado" suppressEmptyParameters="true"/>
+</s:url>
+
+<s:url var="actividad" action="%{actionName}" method="actividad" namespace="%{nameSpace}">
+    <s:param name="id" value="id" suppressEmptyParameters="true"/>
+    <s:param name="parentId" value="parentId" suppressEmptyParameters="true"/>
+    <s:param name="aplicacionId" value="aplicacionId" suppressEmptyParameters="true"/>
+    <s:param name="constanciaId" value="constanciaId" suppressEmptyParameters="true"/>
+    <s:param name="plantillaAplicacionId" value="plantillaAplicacionId" suppressEmptyParameters="true"/>
+    <s:param name="borrado" value="borrado" suppressEmptyParameters="true"/>
+</s:url>
+
+<li>
+    <a class="btn btn-white" href="${form}">
+        <i class="bi bi-pencil-square"></i>
+        <s:text name="OpenSGSBean.text.modify"/>
+    </a>
+</li>
+
+<li>
+    <a class="btn btn-white" href="${ver}">
+        <i class="bi bi-search"></i>
+        <s:text name="OpenSGSBean.text.view"/>
+    </a>
+</li>
+
+<s:if test="activo == false">
+    <li>
+        <a class="btn btn-white" href="${activar}">
+            <i class="bi bi-toggle-on"></i>
+            <s:text name="OpenSGSBean.text.enable"/>
+        </a>
+    </li>
+</s:if>
+<s:else>
+    <li>
+        <a class="btn btn-white pe-3" href="${desactivar}">
+            <i class="bi bi-toggle-off"></i>
+            <s:text name="OpenSGSBean.text.disable"/>
+        </a>
+    </li>
+</s:else>
+
+<s:if test="borrado == false">
+    <li>
+        <a class="btn btn-white pe-3" href="${borrar}" onclick="return confirmarEliminar()">
+            <i class="bi bi-x-circle"></i>
+            <s:text name="OpenSGSBean.text.delete"/>
+        </a>
+    </li>
+</s:if>
+<s:else>
+    <li>
+        <a class="btn btn-white pe-3" href="${restaurar}" onclick="return confirmarRestaurar()">
+            <i class="bi bi-arrow-counterclockwise"></i>
+            <s:text name="OpenSGSBean.text.restore"/>
+        </a>
+    </li>
+</s:else>
+
+<li>
+    <a class="btn btn-white" href="${actividad}">
+        <i class="bi bi-eye"></i>
+        <s:text name="OpenSGSBean.text.activity"/>
+    </a>
+</li>
+

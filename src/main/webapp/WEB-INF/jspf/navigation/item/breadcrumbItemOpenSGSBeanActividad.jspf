@@ -1,0 +1,14 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:url var="actividad" action="%{className}Action" method="actividad" namespace="%{nameSpace}">
+    <s:param name="id" value="parentId" suppressEmptyParameters="true"/>
+    <s:param name="aplicacionId" value="aplicacionId" suppressEmptyParameters="true"/>
+    <s:param name="constanciaId" value="constanciaId" suppressEmptyParameters="true"/>
+    <s:param name="plantillaAplicacionId" value="plantillaAplicacionId" suppressEmptyParameters="true"/>
+    <s:param name="borrado" value="borrado" suppressEmptyParameters="true"/>
+</s:url>
+
+<li class="breadcrumb-item" aria-current="page">
+    <a class="link-dark" href="${actividad}"><s:property value="textActivityNavigation"/></a>
+</li>

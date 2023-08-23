@@ -1,0 +1,37 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:iterator value="listaDtPaginasSolicitud" status="status">
+    
+    <s:if test="%{dtPaginaAplicacion.esctructuraDatos == 'DatosPersonalesCEP'}">
+        <s:action name="DatosPersonalesCEPAction!ver" namespace="/solicitudes/paginas/cep" executeResult="true">
+            <s:param name="solicitudId" value="id" />
+            <s:param name="id" value="id" />
+        </s:action> 
+    </s:if>
+
+    <s:if test="%{dtPaginaAplicacion.esctructuraDatos == 'EducacionCEP'}">
+        <s:action name="EducacionCEPAction!ver" namespace="/solicitudes/paginas/cep" executeResult="true">
+            <s:param name="solicitudId" value="id" />
+            <s:param name="id" value="id" />
+        </s:action> 
+    </s:if>
+    
+    <s:if test="%{dtPaginaAplicacion.esctructuraDatos == 'SituacionLaboralCEP'}">
+        <s:action name="SituacionLaboralCEPAction!ver" namespace="/solicitudes/paginas/cep" executeResult="true">
+            <s:param name="solicitudId" value="id" />
+            <s:param name="id" value="id" />
+        </s:action>
+    </s:if>
+    
+    <s:if test="%{dtPaginaAplicacion.esctructuraDatos == 'DifusionCEP'}">
+        <s:action name="DifusionCEPAction!ver" namespace="/solicitudes/paginas/cep" executeResult="true">
+            <s:param name="solicitudId" value="id" />
+            <s:param name="id" value="id" />
+        </s:action>
+    </s:if>
+
+</s:iterator>
+
+
+

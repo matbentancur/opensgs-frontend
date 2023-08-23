@@ -1,0 +1,16 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<%@ include file="/WEB-INF/jspf/layout/anuncios.jspf" %>
+
+<div class="btn-group">
+
+    <%@ include file="/WEB-INF/jspf/solicitudes/paginas/dropdownPaginas.jspf" %>
+
+    <%@ include file="/WEB-INF/jspf/layout/documentos.jspf" %>
+
+    <%@ include file="/WEB-INF/jspf/solicitudes/paginas/buttonPreguntasFrecuentes.jspf" %>
+
+</div>
+
+

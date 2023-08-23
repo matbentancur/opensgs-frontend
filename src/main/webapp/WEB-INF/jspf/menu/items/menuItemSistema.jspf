@@ -1,0 +1,16 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:url var="sistema" action="SistemaAction"  method="form" namespace="/sistema"/>
+
+<div class="col">
+    <a class="link-dark" href="${sistema}">
+        <div class="card text-center">
+            <i class="bi bi-sliders"></i>
+            <div class="card-body">
+                <h5 class="card-title"><s:text name="Menu.card.title.system"/></h5>
+                <p class="card-text"><s:text name="Menu.card.text.system"/></p>
+            </div>
+        </div>
+    </a>
+</div>

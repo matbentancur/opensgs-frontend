@@ -1,0 +1,12 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<%@ include file="/WEB-INF/jspf/navigation/navigationHeader.jspf" %>
+
+<%@ include file="/WEB-INF/jspf/navigation/item/breadcrumbItemInicio.jspf" %>
+
+<%@ include file="/WEB-INF/jspf/navigation/item/breadcrumbItemContacto.jspf" %>
+
+<li class="breadcrumb-item active" aria-current="page"><s:text name="OpenSGSBean.text.faq"/></li>
+
+<%@ include file="/WEB-INF/jspf/navigation/navigationFooter.jspf" %>

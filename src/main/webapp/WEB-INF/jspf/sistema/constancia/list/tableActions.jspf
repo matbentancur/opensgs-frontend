@@ -1,0 +1,47 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:url var="emitir" action="%{actionName}" method="emitir" namespace="%{nameSpace}">
+    <s:param name="id" value="id" suppressEmptyParameters="true"/>
+</s:url>
+
+<s:url var="textos" action="ConstanciaElementoTextoAction" method="listar" namespace="%{nameSpace}">
+    <s:param name="constanciaId" value="id" suppressEmptyParameters="true"/>
+    <s:param name="parentId" value="parentId" suppressEmptyParameters="true"/>
+    <s:param name="aplicacionId" value="aplicacionId" suppressEmptyParameters="true"/>
+</s:url>
+
+<s:url var="imagenes" action="ConstanciaElementoImagenAction" method="listar" namespace="%{nameSpace}">
+    <s:param name="constanciaId" value="id" suppressEmptyParameters="true"/>
+    <s:param name="parentId" value="parentId" suppressEmptyParameters="true"/>
+    <s:param name="aplicacionId" value="aplicacionId" suppressEmptyParameters="true"/>
+</s:url>
+
+<li>
+    <a class="btn btn-white" href="${emitir}">
+        <i class="bi bi-arrow-bar-right"></i>
+        <s:text name="OpenSGSBean.text.emit"/>
+    </a>
+</li>
+
+<li>
+    <a class="btn btn-white" href="${textos}">
+        <i class="bi bi-fonts"></i>
+        <s:text name="OpenSGSBean.text.texts"/>
+    </a>
+</li>
+
+<li>
+    <a class="btn btn-white" href="${imagenes}">
+        <i class="bi bi-images"></i>
+        <s:text name="OpenSGSBean.text.images"/>
+    </a>
+</li>
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:set var="fieldNameValue" value="%{getFieldNameValue('scope')}"/>
+      
+<s:hidden name="%{fieldNameValue}" value="APLICACION"/>
+
+

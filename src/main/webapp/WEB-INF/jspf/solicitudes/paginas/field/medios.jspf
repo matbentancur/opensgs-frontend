@@ -1,0 +1,31 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<s:set var="fieldNameValue" value="%{getFieldNameValue('medios')}"/>
+
+<fieldset class="row mb-3">
+    <legend class="col-form-label col-sm-2 pt-0"><s:text name="Pagina.attribute.medios"/></legend>
+    <div class="col-sm-10">
+
+        <%@ include file="/WEB-INF/jspf/field/checkboxInvalid.jspf" %>
+
+        <s:checkboxlist 
+            id="%{fieldNameValue}" 
+            name="%{fieldNameValue}" 
+            class="%{valueClass}"
+            listKey="key" 
+            listValue="value" 
+            list="leerElementosProperties('Pagina.medios')" 
+            />
+
+        <%@ include file="/WEB-INF/jspf/field/textFieldInvalidFeedback.jspf" %>
+
+</fieldset>
+
+<script>
+    $(".container .form-check-input").each(function(index) {
+        $(this).next(".checkboxLabel").addBack().wrapAll("<div class=\"form-check\" />")
+    });
+</script>
+
+
